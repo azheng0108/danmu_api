@@ -19,12 +19,12 @@ jobs:
 
         steps:
             - name: Checkout target repo
-              uses: actions/checkout@v4
+              uses: actions/checkout@v5
               with:
                 token: ${{ secrets.WORKFLOW_TOKEN || github.token }}
 
             - name: Sync Upstream
-              uses: aormsby/Fork-Sync-With-Upstream-action@v3.4
+              uses: aormsby/Fork-Sync-With-Upstream-action@v3.4.3
               with:
                   target_repo_token: ${{ secrets.WORKFLOW_TOKEN || github.token }}
                   upstream_sync_repo: huangxd-/danmu_api
